@@ -1,20 +1,20 @@
 import data from "./data.json"
 import './App.css';
 import Navbar from './components/navbar/Navbar';
-import Searchbar from './components/searchbar/Searchbar';
-import TrendingContainer from './components/trendingvideos/TrendingContainer';
-import RecomendedList from './components/recomended/RecomendedList';
-
+import MainPage from "./pages/MainPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ListPage from "./pages/ListPage";
 function App() {
-  console.log(data)
   return (
     <div className="App">
-      <Navbar />
-      <div className='content--container'>
-        <Searchbar />
-        <TrendingContainer movies={data.filter((item) => item.isTrending === true)}/>
-        <RecomendedList movies={data.filter((item) => item.isTrending !== true)}/>
-      </div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={ <MainPage data={data}/>} />
+          <Route path="/movies" element={<ListPage />} />
+          <Route path="/tv-series" element={<ListPage /> } />
+        </Routes>
+      </Router>
     </div>
   );
 }
