@@ -1,0 +1,23 @@
+.searchbar {
+    padding-top: 30px;
+    width: 60%;
+    height: 10%;
+    display: flex;    
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3%;
+}
+.search--input{
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--background-white);
+    font-size: 18px;
+    font-family: var(--font-family);
+    line-height: 30.24px;
+    letter-spacing: 1px;
+    border: none;
+} 
+input:focus {
+    border-bottom: 1px solid var(--background-greyish-blue);
+}
