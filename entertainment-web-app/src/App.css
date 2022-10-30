@@ -24,17 +24,19 @@
   height: 100vh;
   gap: 36px;
   text-align: center;
-  color: var(--background-red);
   background-color: var(--background-dark-blue);
   font-family: var(--font-family);
   font-size: var(--font-heading-large);
+  overflow-x: hidden;
 }
 .content--container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 95%;
+  gap: 4%;
+  width: 90%;
   height: 90%;
+  overflow-y: auto;
 }
 
 

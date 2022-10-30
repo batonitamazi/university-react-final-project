@@ -20,7 +20,7 @@
     height: 45%;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 20%;
+    gap: 25%;
 }
 .category--items {
     display: flex;

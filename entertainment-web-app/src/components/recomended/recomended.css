@@ -1,0 +1,35 @@
+.recommended--movies {
+    padding-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5.5%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recommended-movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+.recommended-movie-img {
+    background-size: cover;
+    border-radius: 10px;
+    width: 280px;
+    height: 174px;
+}
+.recommended-heading {
+    font-size: var(--font-heading-xs);
+}
+.card--subcontainer {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+    gap: 2%;
+    align-items: flex-start;
+}
