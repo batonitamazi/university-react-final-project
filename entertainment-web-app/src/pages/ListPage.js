@@ -4,8 +4,7 @@ import Searchbar from '../components/searchbar/Searchbar'
 function ListPage({data, header}) {
     return (
         <div className='content--container'>
-            <Searchbar />
-            <RecomendedList data={data} header={hea}/>
+            <RecomendedList data={data} header={header}/>
         </div>
     )
 }
