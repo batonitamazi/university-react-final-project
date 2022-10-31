@@ -12,7 +12,7 @@ function Navbar() {
                 <img src='./assets/icon-nav-home.svg' alt='home' className='category--img' onClick={() => navigate("/")}/>
                 <img src='./assets/icon-nav-movies.svg' alt='home' className='category--img'  onClick={() => navigate("/movies")}/>
                 <img src='./assets/icon-nav-tv-series.svg' alt='home' className='category--img'  onClick={() => navigate("/tv-series")}/>
-                <img src='./assets/icon-nav-bookmark.svg' alt='home' className='category--img' />
+                <img src='./assets/icon-nav-bookmark.svg' alt='home' className='category--img' onClick={() => navigate("/favourites")}/>
             </div>
         </div>
         <img src='./assets/image-avatar.png' alt='avatar' className='avatar--img' id='avatar' />
