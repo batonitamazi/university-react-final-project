@@ -8,7 +8,7 @@ function MainPage({data}) {
         <div className='content--container'>
             <Searchbar />
             <TrendingContainer movies={data?.filter((item) => item.isTrending === true)} />
-            <RecomendedList movies={data?.filter((item) => item.isTrending !== true)} />
+            <RecomendedList data={data?.filter((item) => item.isTrending !== true)} header="Recommended for you"/>
         </div>
     )
 }

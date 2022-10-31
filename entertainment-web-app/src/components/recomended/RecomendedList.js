@@ -1,12 +1,12 @@
 import React from 'react'
 import './recomended.css';
 
-function RecomendedList({ movies }) {
+function RecomendedList({ data, header }) {
     return (
         <div className='trending--container'>
-            <h1 className='trending--heading'>Recommended for you</h1>
+            <h1 className='trending--heading'>{header}</h1>
             <div className='recommended--movies'>
-                {movies?.map((item, index) => {
+                {data?.map((item, index) => {
                     return (
                         <div className='recommended-movie-card' key={index}>
                             <div style={{ backgroundImage: `url(${item.thumbnail.regular.large})` }} className='recommended-movie-img'>

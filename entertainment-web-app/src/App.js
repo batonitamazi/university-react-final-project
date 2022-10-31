@@ -11,8 +11,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={ <MainPage data={data}/>} />
-          <Route path="/movies" element={<ListPage />} />
-          <Route path="/tv-series" element={<ListPage /> } />
+          <Route path="/movies" element={<ListPage data={data.filter((item) => item.category === "Movie")} header="Movies"/>} />
+          <Route path="/tv-series" element={<ListPage data={data.filter((item) => item.category === "TV Series")}  header="Tv Series"/> } />
         </Routes>
       </Router>
     </div>
