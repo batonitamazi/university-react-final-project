@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import data from "./data.json"
+import {useSelector } from 'react-redux'
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import MainPage from "./pages/MainPage";
@@ -13,7 +13,8 @@ function App() {
     e.preventDefault();
     setSearch(e.target.value)
   }
-  const newData = data.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()))
+  const allData = useSelector((state) => state.favourites.allData)
+  const newData = allData.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()))
   return (
     <div className="App">
       <Router>

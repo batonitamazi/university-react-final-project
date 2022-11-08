@@ -12,8 +12,17 @@ function TrendingContainer({ movies }) {
           return (
             <div className='movie-card' key={index} style={{ backgroundImage: `url(${item.thumbnail.trending.large})` }}>
               <div className='bookmark--card'>
-                <div className='bookmark--container'>
-                  <img src='./assets/icon-bookmark-empty.svg' alt='bookmark' className='bookmark--icon' onClick={() => dispatch(addTofavourites({ ...item }))} />
+                <div className='bookmark--container'
+                  onClick={() =>
+                  (!item.isBookmarked,
+                    dispatch(addTofavourites({ ...item }))
+                  )
+                  }>
+                  <img
+                    src={item.isBookmarked ? './assets/icon-bookmark-full.svg' : './assets/icon-bookmark-empty.svg'}
+                    alt='bookmark'
+                    className='bookmark--icon'
+                  />
                 </div>
                 <div className='play--button--container trending--play'>
                   <img src="./assets/icon-play.svg" className="play--button" alt="play" />

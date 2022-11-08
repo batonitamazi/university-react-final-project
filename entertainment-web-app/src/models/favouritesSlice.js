@@ -3,8 +3,7 @@ import data from '../data.json'
 
 const initialState = {
     favourites: data.filter((item) => item.isBookmarked === true),
-    allInfo: data.map((item) => item)
-    
+    allData: data,
 }
 export const favouritesSlice = createSlice({
     name: 'favourites',
@@ -13,12 +12,17 @@ export const favouritesSlice = createSlice({
         addTofavourites: (state, action) => {
             const alreadyBookmarked = state.favourites.find((item) => item.title === action.payload.title)
             if (alreadyBookmarked) {
+                const bookmarkItem = state.allData.find((item) => item.title === action.payload.title)
+                bookmarkItem.isBookmarked = false;
                 const removeItem = state.favourites.filter((item) => item.title !== action.payload.title)
                 action.payload.isBookmarked = false
                 state.favourites = removeItem;
             } else {
+                const bookmarkItem = state.allData.find((item) => item.title === action.payload.title)
+                bookmarkItem.isBookmarked = true;
+                action.payload.isBookmarked = true;
                 state.favourites.push({ ...action.payload })
-                
+
             };
         },
         removeFavouriteItem: (state, action) => {
@@ -28,6 +32,6 @@ export const favouritesSlice = createSlice({
     }
 
 })
-export const  {addTofavourites, removeFavouriteItem} = favouritesSlice.actions
+export const { addTofavourites, removeFavouriteItem } = favouritesSlice.actions
 
 export default favouritesSlice.reducer
