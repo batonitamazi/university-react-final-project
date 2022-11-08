@@ -34,3 +34,49 @@
     height: 20px;
     cursor: pointer;
 }
+@media (width<800px){
+    .navbar{
+      margin: 0px;
+      margin-top: 20px;
+      flex-direction: row;
+      height: 7.5%;
+      width: 91.5%;
+    }
+    .nav-items{
+        width: 65%;
+        flex-direction: row;
+        gap: 0%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .category--items {
+        flex-direction: row;
+        width: 40%;
+    }
+    .logo--img{
+        margin-left: 10px;
+        width: 32px;
+        height: 25.6px;
+    }
+    .avatar--img {
+        margin-right: 10px;
+    }
+}
+@media (width<400px){
+    .navbar{
+        width: 100%;
+        border-radius: 0px;
+
+    }
+    .nav-items{
+        width: 70%;
+        flex-direction: row;
+        gap: 0%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .category--items {
+        flex-direction: row;
+        width: 50%;
+    }
+}

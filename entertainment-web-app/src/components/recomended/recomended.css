@@ -10,6 +10,7 @@
 }
 
 .recommended-movie-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -32,4 +33,45 @@
     flex-direction: column;
     gap: 2%;
     align-items: flex-start;
+}
+.play--button--container {
+    display: none;
+    left: 20%;
+    width: 117px;
+    height: 48px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28.5px;
+    cursor: pointer;
+    color: var(--background-white);
+    font-size: var(--font-heading-xs);
+    background-color: var(--background-greyish-blue);
+}
+
+.recommended-movie-img:hover  .play--button--container{
+    opacity: 0.5;
+    display: flex;
+}
+
+
+@media (width<800px){
+    .recommended-movie-img {
+        background-size: cover;
+        border-radius: 10px;
+        width: 215px;
+        height: 140px;
+    }
+}
+@media (width<400px){
+    .recommended-movie-img {
+        background-size: cover;
+        border-radius: 10px;
+        width: 164px;
+        height: 110px;
+    }
+    .play--button--container {
+        width: 80px;
+        height: 30px;
+    }
 }

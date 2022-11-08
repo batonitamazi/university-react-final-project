@@ -15,8 +15,12 @@ function RecomendedList({ data, header }) {
                             <div style={{ backgroundImage: `url(${item.thumbnail.regular.large})` }} className='recommended-movie-img'>
                                 <div className='bookmark--card'>
                                     <div className='bookmark--container'>
-                                        <img src={item.isBookmarked ? './assets/icon-bookmark-full.svg' : './assets/icon-bookmark-empty.svg'} alt='bookmark' className='bookmark--icon' onClick={() => dispatch(addTofavourites({...item}))}/>
+                                        <img src={item.isBookmarked ? './assets/icon-bookmark-full.svg' : './assets/icon-bookmark-empty.svg'} alt='bookmark' className='bookmark--icon' onClick={() => dispatch(addTofavourites({ ...item }))}/>
                                     </div>
+                                </div>
+                                <div className='play--button--container'>
+                                    <img src="./assets/icon-play.svg" className="play--button" alt="play" />
+                                    Play
                                 </div>
                             </div>
                             <div className='card--subcontainer'>

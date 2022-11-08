@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import './trendingcontainer.css'
 import { addTofavourites } from '../../models/favouritesSlice';
 function TrendingContainer({ movies }) {
@@ -13,11 +13,15 @@ function TrendingContainer({ movies }) {
             <div className='movie-card' key={index} style={{ backgroundImage: `url(${item.thumbnail.trending.large})` }}>
               <div className='bookmark--card'>
                 <div className='bookmark--container'>
-                  <img src='./assets/icon-bookmark-empty.svg' alt='bookmark' className='bookmark--icon' onClick={() => dispatch(addTofavourites({...item}))}/>
+                  <img src='./assets/icon-bookmark-empty.svg' alt='bookmark' className='bookmark--icon' onClick={() => dispatch(addTofavourites({ ...item }))} />
+                </div>
+                <div className='play--button--container trending--play'>
+                  <img src="./assets/icon-play.svg" className="play--button" alt="play" />
+                  Play
                 </div>
               </div>
               <div>
-                <span className='item--span'>{item.year} • <img src={item.category==="movie" ? './assets/icon-category-movie.svg' : './assets/icon-category-tv.svg'} alt='movie' /> {item.category} • {item.rating}</span>
+                <span className='item--span'>{item.year} • <img src={item.category === "movie" ? './assets/icon-category-movie.svg' : './assets/icon-category-tv.svg'} alt='movie' /> {item.category} • {item.rating}</span>
                 <h1 className='card--heading'>{item.title}</h1>
               </div>
             </div>
