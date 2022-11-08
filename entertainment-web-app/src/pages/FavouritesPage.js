@@ -3,7 +3,8 @@ import {useSelector } from 'react-redux'
 import RecomendedList from '../components/recomended/RecomendedList'
 
 
-function FavouritesPage() {
+function FavouritesPage({setSearchKeyWord}) {
+  setSearchKeyWord('Search for bookmarked shows')
   const favourites = useSelector((state) => state.favourites)
     return (
         <>

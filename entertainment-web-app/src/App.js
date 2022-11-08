@@ -9,6 +9,7 @@ import Searchbar from "./components/searchbar/Searchbar";
 import FavouritesPage from './pages/FavouritesPage';
 function App() {
   const [search, setSearch] = useState("")
+  const [searchKeyWord, setSearchKeyWord] = useState('Search for movies or TV series')
   const handleSearch = (e) => {
     e.preventDefault();
     setSearch(e.target.value)
@@ -20,12 +21,12 @@ function App() {
       <Router>
         <Navbar />
         <div className="content--container">
-          <Searchbar search={search} handleSearch={handleSearch}/>
+          <Searchbar search={search} handleSearch={handleSearch} searchkeyword={searchKeyWord}/>
           <Routes>
-            <Route path="/" element={<MainPage data={newData} />} />
-            <Route path="/movies" element={<ListPage data={newData.filter((item) => item.category === "Movie")} header="Movies" />} />
-            <Route path="/tv-series" element={<ListPage data={newData.filter((item) => item.category === "TV Series")} header="Tv Series" />} />
-            <Route path='/favourites' element={<FavouritesPage />} />
+            <Route path="/" element={<MainPage data={newData} setSearchKeyWord={setSearchKeyWord}/>}/>
+            <Route path="/movies" element={<ListPage data={newData.filter((item) => item.category === "Movie")} header="Movies"  setSearchKeyWord={setSearchKeyWord}/>}/>
+            <Route path="/tv-series" element={<ListPage data={newData.filter((item) => item.category === "TV Series")} header="Tv Series"  setSearchKeyWord={setSearchKeyWord}/>}/>
+            <Route path='/favourites' element={<FavouritesPage setSearchKeyWord={setSearchKeyWord}/>} />
           </Routes>
         </div>
 

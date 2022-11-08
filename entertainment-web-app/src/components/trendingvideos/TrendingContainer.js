@@ -14,7 +14,7 @@ function TrendingContainer({ movies }) {
               <div className='bookmark--card'>
                 <div className='bookmark--container'
                   onClick={() =>
-                  (!item.isBookmarked,
+                  (
                     dispatch(addTofavourites({ ...item }))
                   )
                   }>

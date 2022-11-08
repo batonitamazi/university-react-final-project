@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 5.5%;
+    gap: 4%;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -68,6 +68,18 @@
         background-size: cover;
         border-radius: 10px;
         width: 164px;
+        height: 110px;
+    }
+    .play--button--container {
+        width: 80px;
+        height: 30px;
+    }
+}
+@media (width<350px){
+    .recommended-movie-img {
+        background-size: cover;
+        border-radius: 10px;
+        width: 134px;
         height: 110px;
     }
     .play--button--container {
