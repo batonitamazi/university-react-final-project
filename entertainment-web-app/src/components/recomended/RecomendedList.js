@@ -18,7 +18,7 @@ function RecomendedList({ data, header }) {
                                         <img src={item.isBookmarked ? './assets/icon-bookmark-full.svg' : './assets/icon-bookmark-empty.svg'} alt='bookmark' className='bookmark--icon' />
                                     </div>
                                 </div>
-                                <div className='play--button--container'>
+                                <div className='recommended--play-btn play--button--container'>
                                     <img src="./assets/icon-play.svg" className="play--button" alt="play" />
                                     Play
                                 </div>

@@ -36,7 +36,7 @@
 }
 .play--button--container {
     display: none;
-    left: 20%;
+    left: 35%;
     width: 117px;
     height: 48px;
     position: absolute;
@@ -62,6 +62,10 @@
         width: 215px;
         height: 140px;
     }
+    .recommended--play-btn {
+        left: 25%;
+        top: 25%;
+    }
 }
 @media (width<400px){
     .recommended-movie-img {
@@ -74,6 +78,7 @@
         width: 80px;
         height: 30px;
     }
+    
 }
 @media (width<350px){
     .recommended-movie-img {

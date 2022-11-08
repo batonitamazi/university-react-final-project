@@ -69,14 +69,14 @@
     width: 12px;
     height: 14px;
 }
-.trending--play{
-    top: 42%;
-    right: 40%;
-    width: 5%;
-}
 .movie-card:hover .play--button--container{
     opacity: 0.5;
     display: flex;
+}
+.trending--play{
+    left: 80%;
+    top: 45%;
+    width: 5%;
 }
 @media(width<800px){
     .movie-card {
